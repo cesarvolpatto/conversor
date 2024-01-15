@@ -3,6 +3,10 @@ import os
 import camelot
 import pandas as pd
 from io import BytesIO
+import os
+
+os.environ['OPENCV_IO_MAX_IMAGE_PIXELS'] = '2200000000'  # ou outro valor adequado para suas imagens
+
 
 def pdf_to_xlsx(pdf_path, xlsx_path):
     # Extrair dados da tabela do PDF usando camelot
